@@ -63,6 +63,8 @@
       margin-left: -3em;
       width: 3em;
       display: inline-block;
+      *display: inline;
+      *zoom: 1;
       text-align: right;
     }
     .summary img{
@@ -83,7 +85,7 @@
 <body>
   <script>
     window.onresize = function(){
-      document.body.style.paddingTop = window.innerWidth / 3 + 'px';
+      document.body.style.paddingTop = (window.innerWidth || document.body.clientWidth) / 3 + 'px';
     };
     window.onresize();
   </script>
